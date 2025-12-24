@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Básico -->
+    <title>Oops Lab | Agencia de IA, Automatizaciones y Finetuning de Modelos</title>
+    <meta name="description" content="La primera agencia de IA que admite el caos. Expertos en finetuning de modelos pequeños (Small Models) y automatizaciones que funcionan. Sin humo, sin partners, solo realidad.">
+    <meta name="keywords" content="IA, Agencia IA, Automatizaciones, Finetuning, Small Models, Consultoría IA, Oops Lab">
+    <meta name="author" content="Oops Lab">
+
+    <!-- Datos Estructurados (JSON-LD) - Email Ofuscado con Unicode -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ConsultingService",
+      "name": "Oops Lab",
+      "description": "Agencia de IA especializada en finetuning de modelos pequeños y automatizaciones honestas sin humo corporativo.",
+      "url": "https://www.oopslab.fyi",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "ES"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Oops Lab",
+        "email": "\u006f\u006f\u0070\u0073\u006c\u0061\u0062\u002e\u0066\u0079\u0069\u0040\u0067\u006d\u0061\u0069\u006c\u002e\u0063\u006f\u006d"
+      },
+      "serviceType": ["IA Consulting", "Model Finetuning", "Automation"],
+      "areaServed": "Worldwide"
+    }
+    </script>
+
+    <!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.oopslab.fyi/">
+    <meta property="og:title" content="Oops Lab | La Agencia de IA que admite el caos">
+    <meta property="og:description" content="Expertos en finetuning de modelos pequeños y automatizaciones honestas. Sin humo, sin partners, solo realidad técnica.">
+    <meta property="og:image" content="https://www.oopslab.fyi/og-image.png">
+
+    <!-- Twitter / X -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.oopslab.fyi/">
+    <meta property="twitter:title" content="Oops Lab | La Peor Agencia de IA">
+    <meta property="twitter:description" content="Automatizaciones que funcionan (o fallan mejor). Sin partners de Google o Microsoft, solo honestidad brutal.">
+    <meta property="twitter:image" content="https://www.oopslab.fyi/og-image.png">
+
+    <!-- Favicon Actualizado (Coincide con el Logo) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none'><path d='M30 40C30 18 70 18 70 40C70 55 60 62 60 75H40C40 62 30 55 30 40Z' stroke='%23facc15' stroke-width='8' stroke-linejoin='round'/><path d='M40 75H60M42 82H58M45 89H55' stroke='%23facc15' stroke-width='8' stroke-linecap='round'/><path d='M50 20L45 35L55 45L42 68' stroke='white' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700;900&family=Space+Mono&display=swap');
+
+        :root {
+            --warning-yellow: #facc15;
+            --error-red: #ef4444;
+            --bsod-blue: #2563eb;
+            --oops-purple: #8b5cf6;
+        }
+
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+            overflow-x: hidden;
+            hyphens: auto;
+            scroll-behavior: smooth;
+        }
+
+        .mono { font-family: 'Space Mono', monospace; }
+
+        .brutalist-card {
+            border: 4px solid #000;
+            box-shadow: 6px 6px 0px #000;
+            transition: all 0.2s ease;
+        }
+        
+        @media (min-width: 768px) {
+            .brutalist-card {
+                box-shadow: 8px 8px 0px #000;
+            }
+        }
+
+        .brutalist-card:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 10px 10px 0px #000;
+        }
+
+        .marquee {
+            white-space: nowrap;
+            overflow: hidden;
+            background: var(--warning-yellow);
+            color: #000;
+            padding: 10px 0;
+            font-weight: bold;
+            border-bottom: 4px solid #000;
+            border-top: 4px solid #000;
+        }
+        .marquee-content {
+            display: inline-block;
+            animation: marquee 20s linear infinite;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        .logo-icon:hover {
+            transform: rotate(-5deg) scale(1.05);
+            filter: drop-shadow(0 0 12px var(--warning-yellow));
+        }
+
+        .floating-error {
+            position: fixed;
+            pointer-events: none;
+            z-index: 100;
+            padding: 14px;
+            background: white;
+            color: black;
+            border: 3px solid black;
+            font-weight: bold;
+            box-shadow: 5px 5px 0px var(--error-red);
+            max-width: 320px;
+            font-size: 11px;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body class="selection:bg-yellow-400 selection:text-black">
+
+    <!-- Marquee de Advertencia -->
+    <div class="marquee mono text-xs md:text-sm uppercase" role="complementary">
+        <div class="marquee-content">
+            ⚠️ ADVERTENCIA: No tenemos partners • No tenemos inversores • No sabemos qué estamos haciendo • Nuestra IA es menos inteligente que tu perro pero más rápida • ⚠️
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="container mx-auto px-6 py-8 md:py-12 flex flex-col md:flex-row justify-between items-center gap-6">
+        <a href="/" class="flex items-center gap-5 group" aria-label="Oops Lab Home">
+            <div class="logo-icon transition-all duration-300">
+                <svg width="65" height="65" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-14 h-14 md:w-16 md:h-16">
+                    <path d="M30 40C30 18 70 18 70 40C70 55 60 62 60 75H40C40 62 30 55 30 40Z" stroke="white" stroke-width="6" stroke-linejoin="round" fill="transparent"/>
+                    <path d="M40 75H60M42 82H58M45 89H55" stroke="white" stroke-width="5" stroke-linecap="round"/>
+                    <path d="M50 20L45 35L55 45L42 68" stroke="#facc15" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                    <line x1="50" y1="5" x2="50" y2="12" stroke="#facc15" stroke-width="4" stroke-linecap="round"/>
+                    <line x1="15" y1="20" x2="22" y2="27" stroke="#facc15" stroke-width="4" stroke-linecap="round"/>
+                    <line x1="85" y1="20" x2="78" y2="27" stroke="#facc15" stroke-width="4" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <div class="flex flex-col">
+                <span class="text-4xl md:text-5xl font-black tracking-tighter leading-none group-hover:text-yellow-400 transition-colors uppercase text-white">OOPS</span>
+                <span class="text-4xl md:text-5xl font-black tracking-tighter leading-none group-hover:text-yellow-400 transition-colors uppercase text-white">LAB</span>
+            </div>
+        </a>
+        <nav class="mono flex flex-wrap justify-center gap-4 md:gap-6 text-xs md:text-sm">
+            <a href="#servicios" class="hover:underline">Servicios</a>
+            <a href="#testimonios" class="hover:underline">Testimonios</a>
+            <a href="#filosofia" class="hover:underline">Filosofía</a>
+            <a href="#partners" class="hover:underline">Partners</a>
+            <a href="#" onclick="showProjectOops(event)" class="hover:text-yellow-400 font-bold">Proyectos</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <main class="container mx-auto px-6 py-12 md:py-20 text-center">
+        <h1 class="text-4xl sm:text-6xl md:text-8xl font-black mb-6 leading-[0.9] break-words uppercase">
+            SOLUCIONES IA QUE <br class="hidden sm:block"> <span class="text-yellow-400">FALLAN MEJOR</span>.
+        </h1>
+        <p class="text-lg md:text-2xl max-w-3xl mx-auto mb-12 text-slate-400">
+            En un mundo lleno de agencias "líderes" y "disruptivas", nosotros somos la primera agencia que admite que la IA es un caos. Pero somos expertos en domar ese caos.
+        </p>
+        
+        <div class="flex flex-wrap justify-center gap-4 md:gap-6">
+            <article class="p-4 md:p-6 bg-blue-600 brutalist-card text-left w-full sm:w-64 rotate-0 sm:rotate-1">
+                <span class="text-3xl md:text-4xl block mb-2 font-black">0</span>
+                <p class="mono text-[10px] md:text-xs uppercase font-bold tracking-widest">Partners oficiales</p>
+            </article>
+            <article class="p-4 md:p-6 bg-red-500 brutalist-card text-left w-full sm:w-64 rotate-0 sm:-rotate-2">
+                <span class="text-3xl md:text-4xl block mb-2 font-black">404</span>
+                <p class="mono text-[10px] md:text-xs uppercase font-bold tracking-widest">Errores corregidos hoy</p>
+            </article>
+            <article class="p-4 md:p-6 bg-green-500 brutalist-card text-left w-full sm:w-64 rotate-0 sm:rotate-3">
+                <span class="text-3xl md:text-4xl block mb-2 font-black">100%</span>
+                <p class="mono text-[10px] md:text-xs uppercase font-bold tracking-widest">Honestidad brutal</p>
+            </article>
+            <article class="p-4 md:p-6 bg-purple-600 brutalist-card text-left w-full sm:w-64 rotate-0 sm:-rotate-1">
+                <span id="oops-counter" class="text-3xl md:text-4xl block mb-2 font-black">0</span>
+                <p class="mono text-[10px] md:text-xs uppercase font-bold tracking-widest">Días desde el último Oops</p>
+            </article>
+        </div>
+    </main>
+
+    <!-- Testimonios -->
+    <section id="testimonios" class="py-16 md:py-24 bg-slate-900 border-y-4 border-black text-center">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-5xl font-black mb-16 uppercase text-yellow-400 italic">Clientes que sobrevivieron 😲</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white text-black p-6 brutalist-card rotate-1">
+                    <p class="text-lg font-bold mb-4 italic leading-tight">"Contraté a Oops Lab esperando una revolución y solo recibí un agente IA que saludaba en Klingon. 10/10, volvería a equivocarme."</p>
+                    <p class="mono text-[10px] uppercase font-bold text-slate-500">— CEO de una startup que ya no existe</p>
+                </div>
+                <div class="bg-yellow-400 text-black p-6 brutalist-card -rotate-1">
+                    <p class="text-lg font-bold mb-4 italic leading-tight">"Dijeron que probablemente romperían algo. Lo rompieron. Al menos fueron sinceros sobre el desastre."</p>
+                    <p class="mono text-[10px] uppercase font-bold text-slate-700">— Un CTO con mucha paciencia</p>
+                </div>
+                <div class="bg-white text-black p-6 brutalist-card rotate-2">
+                    <p class="text-lg font-bold mb-4 italic leading-tight">"Les pedí una automatización y ahora mi cafetera envía informes semanales a Hacienda. No era lo que buscaba, pero me encanta el caos."</p>
+                    <p class="mono text-[10px] uppercase font-bold text-slate-500">— Freelance confundido</p>
+                </div>
+                <div class="bg-blue-500 text-white p-6 brutalist-card -rotate-2">
+                    <p class="text-lg font-bold mb-4 italic leading-tight">"Buscaba humo y me dieron realidad. Todavía estoy procesando el trauma de que algo funcione a la primera."</p>
+                    <p class="mono text-[10px] uppercase font-bold text-blue-200">— Gerente de 'Innovación'</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios -->
+    <section id="servicios" class="bg-slate-100 text-black py-16 md:py-24">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-black mb-12 uppercase italic">Cosas que hacemos (cuando hay café)</h2>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <article class="bg-white p-6 md:p-8 brutalist-card flex flex-col justify-between h-full">
+                    <div>
+                        <div class="w-10 h-10 md:w-12 md:h-12 bg-yellow-400 border-2 border-black mb-6 flex items-center justify-center font-bold">01</div>
+                        <h3 class="text-xl md:text-2xl font-black mb-4 uppercase leading-tight">Finetuning de "Small Models"</h3>
+                        <p class="text-sm md:text-base text-slate-600 mb-6">¿Para qué gastar 50.000€ en GPT-4 si un modelo pequeño y entrenado puede decirte que "no" por mucho menos dinero?</p>
+                    </div>
+                </article>
+                <article class="bg-white p-6 md:p-8 brutalist-card flex flex-col justify-between h-full">
+                    <div>
+                        <div class="w-10 h-10 md:w-12 md:h-12 bg-blue-400 border-2 border-black mb-6 flex items-center justify-center font-bold">02</div>
+                        <h3 class="text-xl md:text-2xl font-black mb-4 uppercase leading-tight">Automatizaciones semi-inteligentes</h3>
+                        <p class="text-sm md:text-base text-slate-600 mb-6">Creamos flujos que conectan tus herramientas. Si algo falla, el sistema te enviará un meme de un gatito pidiendo perdón.</p>
+                    </div>
+                </article>
+                <article class="bg-white p-6 md:p-8 brutalist-card flex flex-col justify-between h-full">
+                    <div>
+                        <div class="w-10 h-10 md:w-12 md:h-12 bg-red-400 border-2 border-black mb-6 flex items-center justify-center font-bold">03</div>
+                        <h3 class="text-xl md:text-2xl font-black mb-4 uppercase leading-tight">Asesoría de "No-Humo"</h3>
+                        <p class="text-sm md:text-base text-slate-600 mb-6">¿Te han vendido una solución mágica de IA? Auditamos y confirmamos si te han timado. Te ayudamos a volver a la realidad.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filosofía -->
+    <section id="filosofia" class="py-16 md:py-24 bg-slate-900 border-t-4 border-black text-center">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h2 class="text-3xl md:text-5xl font-black mb-12 uppercase text-white italic">Filosofía Oops</h2>
+            <p class="text-lg md:text-xl text-slate-400 leading-relaxed mb-12">
+                "En <span class="text-yellow-400 font-bold italic">Oops Lab</span> sabemos que la IA es una herramienta caprichosa. Preferimos entregarte algo que funciona de verdad en el mundo real, asumiendo sus limitaciones, que una mentira corporativa perfecta."
+            </p>
+            <div class="bg-slate-800 p-8 brutalist-card text-white italic">
+                "Si la IA fuera perfecta, tú no tendrías trabajo. Si nosotros fuéramos perfectos, no estaríamos aquí."
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Partners -->
+    <section id="partners" class="py-16 md:py-24 bg-red-600 text-black border-y-4 border-black" aria-labelledby="partners-title">
+        <div class="container mx-auto px-6 text-center">
+            <h2 id="partners-title" class="text-3xl md:text-5xl font-black mb-8 uppercase tracking-tighter">Nuestros (No) Partners</h2>
+            <div class="max-w-3xl mx-auto bg-white p-6 md:p-12 brutalist-card">
+                <p class="text-xl md:text-2xl font-bold leading-tight mb-8">
+                    "Estamos orgullosos de <span class="bg-black text-white px-2 italic">no tener logos</span> de Google, Microsoft o AWS en nuestra web."
+                </p>
+                <p class="text-[10px] md:text-lg mono uppercase tracking-widest text-slate-500 mb-8">
+                    Sin sobornos • Sin comisiones • Sin compromisos
+                </p>
+                <p class="text-lg md:text-xl italic font-medium">
+                    No nos pagan por recomendarte sus servicios, así que si algo <span class="underline decoration-4 decoration-red-500">no da la talla</span>, te lo diremos a la cara.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-12 text-center border-t-4 border-yellow-400">
+        <div class="text-xl md:text-2xl font-black mb-4 uppercase text-white">OOPS LAB © <span id="year"></span></div>
+        <p class="mono text-[10px] text-slate-500 uppercase flex flex-wrap justify-center gap-x-4 mb-6">
+            <span>Sin cookies • Sin trackers • Solo café frío</span>
+            <span class="flex items-center gap-2">
+                [<a href="#" onclick="openContact(event)" class="text-yellow-400 hover:underline">Contacto</a>]
+                [<a href="https://x.com/oopsLab" target="_blank" class="text-yellow-400 hover:underline inline-flex items-center gap-1">
+                    <svg class="w-3 h-3 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>X</a>]
+            </span>
+        </p>
+        <button onclick="triggerError()" class="text-[8px] border border-slate-700 p-2 text-slate-700 hover:text-red-500 uppercase tracking-widest">
+            No pulsar (Genera un error)
+        </button>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+        window.onload = function() {
+            const counterElement = document.getElementById('oops-counter');
+            if (counterElement) {
+                counterElement.textContent = Math.floor(Math.random() * 6);
+            }
+        };
+
+        function openContact(e) {
+            e.preventDefault();
+            const encodedEmail = "b29wc2xhYi5meWlAZ21haWwuY29t";
+            window.location.href = "mailto:" + atob(encodedEmail);
+        }
+
+        function showProjectOops(e) {
+            e.preventDefault();
+            const projectMessages = [
+                "OOPS: Esta sección se la encargamos al becario hace un mes, pero dice que 'el algoritmo' ha decidido que hoy es festivo.",
+                "ERROR 500: El becario jura que terminó los proyectos, pero parece que el perro se ha comido el código (otra vez).",
+                "PENDIENTE: Le pedimos al becario que subiera el portfolio, pero se ha quedado atrapado en un bucle infinito viendo tutoriales de React.",
+                "AVISO: Los proyectos están en el 'limbo digital'. El becario dice que es culpa de Mercurio retrógrado.",
+                "SINCERIDAD: No hay proyectos. Le dijimos al becario que los inventara pero le pilló la honestidad brutal.",
+                "GLITCH: El becario ha intentado usar IA para los proyectos pero la IA le ha dicho que prefiere dedicarse a la pintura.",
+                "ERROR 403: El becario ha bloqueado el acceso a los proyectos porque dice que 'no están listos para el ojo humano'.",
+                "AVISO: Los proyectos existen, pero están guardados en un disquete y el becario no encuentra la disquetera.",
+                "RETRASO: El becario dice que los proyectos están 'en la nube', pero creemos que se refiere a que está soñando despierto."
+            ];
+            triggerFloatingMessage(projectMessages);
+        }
+
+        function triggerError() {
+            const messages = [
+                "ERROR: Demasiado sarcasmo detectado", 
+                "404: Dignidad no encontrada", 
+                "Oops! Algo funcionó bien por accidente", 
+                "FATAL: Café agotado",
+                "WARNING: La IA ha desarrollado sentimientos y ahora está deprimida.",
+                "CRITICAL: Se ha detectado un partner cerca. Protocolo de evacuación activado.",
+                "LOG: El becario ha intentado usar un if-else y el servidor ha entrado en pánico.",
+                "ALERTA: Se ha detectado un PowerPoint sin animaciones. ¡Peligro de aburrimiento!",
+                "ERROR: El modelo de IA se ha escapado por el puerto USB.",
+                "FATAL: El CSS ha cobrado vida y ha decidido que el azul ahora es rojo."
+            ];
+            triggerFloatingMessage(messages);
+        }
+
+        function triggerFloatingMessage(msgList) {
+            const error = document.createElement('div');
+            error.className = 'floating-error mono';
+            error.textContent = msgList[Math.floor(Math.random() * msgList.length)];
+            
+            const maxX = window.innerWidth - 320;
+            const maxY = window.innerHeight - 150;
+            error.style.left = Math.max(10, Math.random() * maxX) + 'px';
+            error.style.top = Math.max(10, Math.random() * maxY) + 'px';
+            
+            document.body.appendChild(error);
+            
+            setTimeout(() => {
+                error.style.opacity = '0';
+                error.style.transition = 'opacity 0.5s ease';
+                setTimeout(() => error.remove(), 500);
+            }, 5500);
+        }
+    </script>
+</body>
+</html>
