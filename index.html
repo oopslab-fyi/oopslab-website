@@ -10,7 +10,7 @@
     <meta name="keywords" content="IA, Agencia IA, Automatizaciones, Finetuning, Small Models, Consultoría IA, Oops Lab">
     <meta name="author" content="Oops Lab">
 
-    <!-- Datos Estructurados (JSON-LD) - Email Ofuscado con Unicode -->
+    <!-- Datos Estructurados (JSON-LD) - Email Ofuscado -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -32,21 +32,14 @@
     }
     </script>
 
-    <!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
+    <!-- Open Graph / Redes Sociales -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.oopslab.fyi/">
     <meta property="og:title" content="Oops Lab | La Agencia de IA que admite el caos">
-    <meta property="og:description" content="Expertos en finetuning de modelos pequeños y automatizaciones honestas. Sin humo, sin partners, solo realidad técnica.">
+    <meta property="og:description" content="Expertos en finetuning de modelos pequeños y automatizaciones honestas. Sin humo, sin partners.">
     <meta property="og:image" content="https://www.oopslab.fyi/og-image.png">
 
-    <!-- Twitter / X -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://www.oopslab.fyi/">
-    <meta property="twitter:title" content="Oops Lab | La Peor Agencia de IA">
-    <meta property="twitter:description" content="Automatizaciones que funcionan (o fallan mejor). Sin partners de Google o Microsoft, solo honestidad brutal.">
-    <meta property="twitter:image" content="https://www.oopslab.fyi/og-image.png">
-
-    <!-- Favicon Actualizado (Coincide con el Logo) -->
+    <!-- Favicon (Bombilla Rota) -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none'><path d='M30 40C30 18 70 18 70 40C70 55 60 62 60 75H40C40 62 30 55 30 40Z' stroke='%23facc15' stroke-width='8' stroke-linejoin='round'/><path d='M40 75H60M42 82H58M45 89H55' stroke='%23facc15' stroke-width='8' stroke-linecap='round'/><path d='M50 20L45 35L55 45L42 68' stroke='white' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/></svg>">
 
     <script src="https://cdn.tailwindcss.com"></script>
@@ -130,7 +123,7 @@
 </head>
 <body class="selection:bg-yellow-400 selection:text-black">
 
-    <!-- Marquee de Advertencia -->
+    <!-- Marquee -->
     <div class="marquee mono text-xs md:text-sm uppercase" role="complementary">
         <div class="marquee-content">
             ⚠️ ADVERTENCIA: No tenemos partners • No tenemos inversores • No sabemos qué estamos haciendo • Nuestra IA es menos inteligente que tu perro pero más rápida • ⚠️
@@ -161,6 +154,7 @@
             <a href="#filosofia" class="hover:underline">Filosofía</a>
             <a href="#partners" class="hover:underline">Partners</a>
             <a href="#" onclick="showProjectOops(event)" class="hover:text-yellow-400 font-bold">Proyectos</a>
+            <a href="https://blog.oopslab.fyi" target="_blank" class="hover:underline">Blog (del becario)</a>
         </nav>
     </header>
 
@@ -170,7 +164,7 @@
             SOLUCIONES IA QUE <br class="hidden sm:block"> <span class="text-yellow-400">FALLAN MEJOR</span>.
         </h1>
         <p class="text-lg md:text-2xl max-w-3xl mx-auto mb-12 text-slate-400">
-            En un mundo lleno de agencias "líderes" y "disruptivas", nosotros somos la primera agencia que admite que la IA es un caos. Pero somos expertos en domar ese caos.
+            En un mundo lleno de agencias "líderes" y "disruptivas", nosotros somos la primera agencia que admite que la IA es un caos si no es domada por un equipo humano. Nosotros somos expertos en controlar (gestionar) ese caos.
         </p>
         
         <div class="flex flex-wrap justify-center gap-4 md:gap-6">
@@ -261,7 +255,7 @@
         </div>
     </section>
 
-    <!-- Sección de Partners -->
+    <!-- Partners Section -->
     <section id="partners" class="py-16 md:py-24 bg-red-600 text-black border-y-4 border-black" aria-labelledby="partners-title">
         <div class="container mx-auto px-6 text-center">
             <h2 id="partners-title" class="text-3xl md:text-5xl font-black mb-8 uppercase tracking-tighter">Nuestros (No) Partners</h2>
@@ -300,7 +294,8 @@
         window.onload = function() {
             const counterElement = document.getElementById('oops-counter');
             if (counterElement) {
-                counterElement.textContent = Math.floor(Math.random() * 6);
+                const randomOops = Math.floor(Math.random() * 6);
+                counterElement.textContent = randomOops;
             }
         };
 
@@ -346,14 +341,11 @@
             const error = document.createElement('div');
             error.className = 'floating-error mono';
             error.textContent = msgList[Math.floor(Math.random() * msgList.length)];
-            
             const maxX = window.innerWidth - 320;
             const maxY = window.innerHeight - 150;
             error.style.left = Math.max(10, Math.random() * maxX) + 'px';
             error.style.top = Math.max(10, Math.random() * maxY) + 'px';
-            
             document.body.appendChild(error);
-            
             setTimeout(() => {
                 error.style.opacity = '0';
                 error.style.transition = 'opacity 0.5s ease';
